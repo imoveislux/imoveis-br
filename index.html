@@ -90,6 +90,26 @@ pointer-events:none;
 
 }
 
+/* ESCUDO INVISÍVEL (bloqueia clique na marca d'água) */
+
+.escudo{
+
+position:fixed;
+
+bottom:7px;
+right:7px;
+
+width:280px;
+height:80px;
+
+z-index:10001;
+
+background:transparent;
+
+pointer-events:auto;
+
+}
+
 /* LOGO NO CURATIVO */
 
 .logo-curativo{
@@ -111,6 +131,16 @@ height:42px;
 bottom:15px;
 right:9px;
   
+}
+
+.escudo{
+
+width:220px;
+height:42px;
+
+bottom:15px;
+right:9px;
+
 }
 
 body{
@@ -145,29 +175,10 @@ width:60px;
 
 </div>
 
+<div class="escudo"></div>
+
 </div>
 
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
