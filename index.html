@@ -16,38 +16,29 @@
 
 <style>
 
-/* CONFIGURAÇÃO GERAL */
+/* estrutura geral */
 
 html,body{
-
 margin:0;
 padding:0;
 height:100%;
 background:#0B1218;
-overflow-y:auto;
-
+overflow-x:hidden;
 }
 
-/* container principal */
+/* container */
 
 .app-container{
-
 position:relative;
 width:100%;
-min-height:100vh;
-
 }
 
-/* aplicativo do Base44 */
+/* iframe */
 
 iframe{
-
 width:100%;
-height:100vh;
-
 border:none;
 display:block;
-
 }
 
 /* logo */
@@ -67,7 +58,7 @@ pointer-events:none;
 
 }
 
-/* CURATIVO ÚNICO QUE ROLA COM A PÁGINA */
+/* curativo */
 
 .curativo{
 
@@ -77,7 +68,7 @@ bottom:0;
 left:0;
 
 width:100%;
-height:120px;
+height:140px;
 
 background:#0B1218;
 
@@ -97,11 +88,35 @@ pointer-events:none;
 
 <img src="logo.png" class="minha-logo">
 
-<iframe src="https://imoveis-investimentos-imoveis-d09a2daa.base44.app"></iframe>
+<iframe id="appframe"
+src="https://imoveis-investimentos-imoveis-d09a2daa.base44.app">
+</iframe>
 
 <div class="curativo"></div>
 
 </div>
+
+<script>
+
+/* ajusta altura automaticamente */
+
+function ajustarAltura(){
+
+let alturaTela = window.innerHeight;
+
+document.getElementById("appframe").style.height = alturaTela + "px";
+
+}
+
+/* executa ao carregar */
+
+window.addEventListener("load", ajustarAltura);
+
+/* executa ao redimensionar */
+
+window.addEventListener("resize", ajustarAltura);
+
+</script>
 
 </body>
 
