@@ -12,7 +12,7 @@
 
 <style>
 
-/* estrutura */
+/* estrutura base */
 
 html,body{
 margin:0;
@@ -30,7 +30,7 @@ height:100vh;
 position:relative;
 }
 
-/* app */
+/* aplicativo */
 
 iframe{
 width:100%;
@@ -39,15 +39,21 @@ border:none;
 display:block;
 }
 
-/* logo superior */
+/* LOGO SUPERIOR */
 
 .minha-logo{
+
 position:fixed;
+
 top:15px;
 left:15px;
+
 width:50px;
+
 z-index:10000;
+
 pointer-events:none;
+
 }
 
 /* CURATIVO */
@@ -56,15 +62,15 @@ pointer-events:none;
 
 position:fixed;
 
-bottom:0;
-right:0;
+bottom:20px;
+right:20px;
 
-width:260px;
-height:90px;
+width:220px;
+height:80px;
 
 background:#0B1218;
 
-border-top-left-radius:30px;
+border-radius:25px;
 
 z-index:9999;
 
@@ -72,15 +78,18 @@ display:flex;
 align-items:center;
 justify-content:center;
 
+box-shadow:0 0 10px rgba(0,0,0,0.5);
+
 pointer-events:none;
 
 }
 
-/* LOGO DENTRO DO CURATIVO */
+/* LOGO NO CURATIVO */
 
 .logo-curativo{
 
-width:40px;
+width:50px;
+height:auto;
 
 }
 
@@ -89,12 +98,19 @@ width:40px;
 @media (max-width:768px){
 
 .curativo{
-width:180px;
-height:70px;
+
+width:160px;
+height:65px;
+
+bottom:10px;
+right:10px;
+
 }
 
 .logo-curativo{
-width:30px;
+
+width:28px;
+
 }
 
 }
