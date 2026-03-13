@@ -4,7 +4,6 @@
 <head>
 
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Imóveis & Investimentos Imobiliários</title>
@@ -19,46 +18,36 @@
 
 /* CONFIGURAÇÃO GERAL */
 
-html, body {
+html,body{
 
 margin:0;
 padding:0;
 height:100%;
 background:#0B1218;
-
-/* permite rolar a página */
-
 overflow-y:auto;
 
 }
 
-/* espaço para evitar que o curativo cubra botões */
-
-body{
-
-padding-bottom:120px;
-
-}
-
-/* container principal */
+/* container do app */
 
 .app-container{
 
-width:100%;
-height:100%;
 position:relative;
-
-background:#0B1218;
+width:100%;
+min-height:100vh;
 
 }
 
-/* aplicativo do Base44 */
+/* iframe do Base44 */
 
 iframe{
 
 width:100%;
-height:calc(100vh - 80px);
+height:100vh;
+
 border:none;
+
+display:block;
 
 }
 
@@ -72,7 +61,6 @@ top:15px;
 left:15px;
 
 width:50px;
-height:auto;
 
 z-index:10000;
 
@@ -80,21 +68,21 @@ pointer-events:none;
 
 }
 
-/* CURATIVO INTELIGENTE (apenas no canto da marca) */
+/* CURATIVO ÚNICO QUE ROLA COM A TELA */
 
 .curativo{
 
-position:fixed;
+position:absolute;
 
-bottom:15px;
-right:15px;
+bottom:0;
+right:0;
 
-width:260px;
-height:90px;
+width:100%;
+max-width:420px;
+
+height:100px;
 
 background:#0B1218;
-
-border-radius:10px;
 
 z-index:9999;
 
@@ -112,9 +100,9 @@ pointer-events:none;
 
 <img src="logo.png" class="minha-logo">
 
-<div class="curativo"></div>
-
 <iframe src="https://imoveis-investimentos-imoveis-d09a2daa.base44.app"></iframe>
+
+<div class="curativo"></div>
 
 </div>
 
