@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Imóveis & Investimentos imobiliários
+</title> <link rel="apple-touch-icon" href="logo.png">
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="manifest" href="manifest.json">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <style>
+        /* Fundo da página e do container Azul quase preto */
+        body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; background-color: #0B1218; }
+        .app-container { width: 100%; height: 100%; position: relative; background-color: #0B1218; }
+        
+        iframe { width: 100%; height: 100%; border: none; }
+
+        /* Sua logo no canto superior esquerdo */
+        .minha-logo { 
+            position: fixed; 
+            top: 15px; 
+            left: 15px; 
+            width: 50px; /* Ajuste se quiser maior ou menor */
+            height: auto; 
+            z-index: 10000; 
+            pointer-events: none; 
+        }
+
+        /* O CURATIVO PRETO: Cobre a marca d'água da IA */
+        .curativo { 
+            position: fixed; 
+            bottom: 0px; 
+            right: 0px; 
+            width: 2000px; 
+            height: 80px; 
+            background-color: #0B1218; /* Azul quase preto para sumir no fundo */
+            z-index: 9999; 
+            pointer-events: none; 
+        }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <img src="logo.png" class="minha-logo">
+        <div class="curativo"></div>
+        <iframe src="https://imoveis-investimentos-imoveis-d09a2daa.base44.app"></iframe>
+    </div>
+</body>
+</html>
